@@ -22,7 +22,7 @@ def create_app():
     # decorator listens for specific endpoint visits
     @app.route('/')  # http://127.0.0.1:5000/
     def root():
-        DB.create_all()
+        #DB.create_all()
         # renders base.html template and passes down title and users
         return render_template('base.html', title="Home", users=User.query.all())
 
