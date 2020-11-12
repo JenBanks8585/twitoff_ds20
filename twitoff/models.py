@@ -30,7 +30,7 @@ class User(DB.Model):
 class Tweet(DB.Model):
     """Tweet text data - associated with Users Table"""
     id = DB.Column(DB.BigInteger, primary_key=True)  # id column (primary key)
-    text = DB.Column(DB.Unicode(300))
+    text = DB.Column(DB.Unicode(500))
     vect = DB.Column(DB.PickleType, nullable= False)
     user_id = DB.Column(DB.BigInteger, DB.ForeignKey(
         "user.id"), nullable=False)
